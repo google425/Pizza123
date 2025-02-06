@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria Temperos Deliciosos</title>
+    <title>Pizzaria temperro do livin</title>
     <style>
         body {
             background-image: url('pizza-de-pepperoni-caseira-portal-minha-receita.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         nav {
@@ -33,14 +38,14 @@
             z-index: 10;
         }
         .logo {
-            height: 50px; 
+            height: 70px;
             width: auto;
         }
 
         nav ul {
             list-style-type: none;
             display: flex;
-            margin-left: 20px; 
+            margin-left: 20px;
         }
 
         nav ul li {
@@ -49,13 +54,14 @@
 
         nav ul li a {
             color: #f39c12;
-            font-size: 1.2em;
+            font-size: 1.5em;
             text-decoration: none;
+            font-weight: bold;
         }
 
         h1 {
             text-align: center;
-            margin-top: 100px;
+            margin-top: 120px;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);
             color: #f39c12;
@@ -74,19 +80,95 @@
             line-height: 1.6;
         }
 
+        .pizzas {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: auto;
+        }
+
+        .pizzas h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .pizza-item {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .pizza-item img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .pizza-item h3 {
+            color: #f39c12;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .pizza-item p {
+            font-size: 1em;
+            line-height: 1.4;
+        }
+
         footer {
             text-align: center;
-            margin-top: 50px;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li a {
+                font-size: 1.2em;
+            }
+
+            .pizza-item {
+                width: 45%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .pizzas h2 {
+                font-size: 1.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            .pizza-item {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .pizzas h2 {
+                font-size: 1.5em;
+            }
         }
 
     </style>
 </head>
 <body>
-
-
     <nav>
         <img src="images (1).jpg" alt="Logo" class="logo"> 
         <ul>
@@ -94,6 +176,8 @@
             <li><a href="#">Menu</a></li>
             <li><a href="#">Promoções</a></li>
             <li><a href="#">Contato</a></li>
+            <li><a href="#">Montar Pizza</a></li>
+            <li><a href="#">Combos</a></li>
         </ul>
     </nav>
 
@@ -105,7 +189,24 @@
     </div>
 
     <footer>
-        <p>Criado por: Livin do Grau mais conhecido como Livin</p>
+        <div class="pizzas">
+            <h2>Carros chefes da Casa</h2>
+            <div class="pizza-item">
+                <img src="Pepperoni.jpg" alt="Pizza de Pepperoni">
+                <h3>Pizza de Pepperoni</h3>
+                <p>Deliciosa pizza de pepperoni com queijo derretido e molho especial.</p>
+            </div>
+            <div class="pizza-item">
+                <img src="Marguerita.jpg" alt="Pizza Margherita">
+                <h3>Pizza Margherita</h3>
+                <p>Clássica pizza Margherita com tomate fresco, manjericão e muçarela.</p>
+            </div>
+            <div class="pizza-item">
+                <img src="Quatro.jpg" alt="Pizza Quatro Queijos">
+                <h3>Pizza Quatro Queijos</h3>
+                <p>Pizza com uma combinação irresistível de quatro queijos especiais.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
