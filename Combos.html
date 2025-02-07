@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combos - Pizzaria Tempero do Livin</title>
+    <style>
+        body {
+            background-image: url('pizza-de-pepperoni-caseira-portal-minha-receita.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            height: 70px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin-left: 20px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #f39c12;
+            font-size: 1.5em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 120px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f39c12;
+            font-size: 2.5em;
+        }
+
+        .combo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+        }
+
+        .combo-card {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .combo-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .combo-card h3 {
+            color: #f39c12;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .combo-card p {
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .combo-card .price {
+            font-size: 1.2em;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .combo-card button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .combo-card button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .combo-card {
+                width: 45%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .combo-card {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="images (1).jpg" alt="Logo" class="logo"> 
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Promoções</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Montar Pizza</a></li>
+            <li><a href="#">Combos</a></li>
+        </ul>
+    </nav>
+
+    <h1>Combos Especiais</h1>
+
+    <div class="combo-grid">
+        <div class="combo-card">
+            <img src="Pepperoni.jpg" alt="Pizza de Pepperoni">
+            <h3>Combo 1</h3>
+            <p>2 Pizzas de Pepperoni + 1 Refrigerante 2L</p>
+            <p class="price">R$ 50,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="Marguerita.jpg" alt="Pizza Margherita">
+            <h3>Combo 2</h3>
+            <p>2 Pizzas Margherita + 1 Refrigerante 2L</p>
+            <p class="price">R$ 45,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="Quatro.jpg" alt="Pizza Quatro Queijos">
+            <h3>Combo 3</h3>
+            <p>2 Pizzas Quatro Queijos + 1 Refrigerante 2L</p>
+            <p class="price">R$ 60,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="Calabresa.jpg" alt="Pizza de Calabresa">
+            <h3>Combo 4</h3>
+            <p>2 Pizzas de Calabresa + 1 Refrigerante 2L</p>
+            <p class="price">R$ 48,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="Frango.jpg" alt="Pizza de Frango com Catupiry">
+            <h3>Combo 5</h3>
+            <p>2 Pizzas de Frango com Catupiry + 1 Refrigerante 2L</p>
+            <p class="price">R$ 55,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="Portuguesa.jpg" alt="Pizza Portuguesa">
+            <h3>Combo 6</h3>
+            <p>2 Pizzas Portuguesa + 1 Refrigerante 2L</p>
+            <p class="price">R$ 52,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="3Porquinhos.jpg" alt="Pizza 3 Porquinhos">
+            <h3>Combo 7</h3>
+            <p>2 Pizzas 3 Porquinhos + 1 Refrigerante 2L</p>
+            <p class="price">R$ 65,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="8Queijos.jpg" alt="Pizza 8 Queijos">
+            <h3>Combo 8</h3>
+            <p>2 Pizzas 8 Queijos + 1 Refrigerante 2L</p>
+            <p class="price">R$ 70,00</p>
+            <button>Comprar Combo</button>
+        </div>
+
+        <div class="combo-card">
+            <img src="Dourada.jpg" alt="Pizza Dourada">
+            <h3>Combo 9</h3>
+            <p>2 Pizzas Dourada + 1 Refrigerante 2L</p>
+            <p class="price">R$ 150,00</p>
+            <button>Comprar Combo</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Pizzaria Tempero do Livin. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

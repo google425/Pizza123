@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Sua Pizza - Pizzaria Tempero do Livin</title>
+    <style>
+        body {
+            background-image: url('pizza-de-pepperoni-caseira-portal-minha-receita.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            height: 70px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin-left: 20px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #f39c12;
+            font-size: 1.5em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 120px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f39c12;
+            font-size: 2.5em;
+        }
+
+        .montar-pizza {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .montar-pizza h2 {
+            color: #f39c12;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .montar-pizza label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .montar-pizza select, .montar-pizza input[type="checkbox"], .montar-pizza input[type="radio"] {
+            margin-bottom: 20px;
+        }
+
+        .montar-pizza .total {
+            font-size: 1.5em;
+            color: #f39c12;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .montar-pizza button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .montar-pizza button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .montar-pizza {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .montar-pizza {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="images (1).jpg" alt="Logo" class="logo"> 
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Promoções</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Montar Pizza</a></li>
+            <li><a href="#">Combos</a></li>
+        </ul>
+    </nav>
+
+    <h1>Monte Sua Pizza</h1>
+
+    <div class="montar-pizza">
+        <h2>Escolha o Tamanho</h2>
+        <label for="tamanho">Tamanho:</label>
+        <select id="tamanho">
+            <option value="25">Pequena (25cm) - R$ 25,00</option>
+            <option value="35">Média (35cm) - R$ 35,00</option>
+            <option value="45">Grande (45cm) - R$ 45,00</option>
+        </select>
+
+        <h2>Escolha a Borda</h2>
+        <label for="borda">Borda:</label>
+        <select id="borda">
+            <option value="0">Sem borda recheada - R$ 0,00</option>
+            <option value="5">Borda de Catupiry - R$ 5,00</option>
+            <option value="6">Borda de Cheddar - R$ 6,00</option>
+            <option value="7">Borda de Chocolate - R$ 7,00</option>
+        </select>
+
+        <h2>Escolha o Sabor</h2>
+        <label><input type="radio" name="sabor" value="0" checked> Único sabor</label>
+        <label><input type="radio" name="sabor" value="5"> Metade/Metade (+ R$ 5,00)</label>
+
+        <h3>Sabores Disponíveis</h3>
+        <label><input type="checkbox" class="ingrediente" value="3"> Pepperoni - R$ 3,00</label>
+        <label><input type="checkbox" class="ingrediente" value="2"> Queijo Extra - R$ 2,00</label>
+        <label><input type="checkbox" class="ingrediente" value="4"> Frango - R$ 4,00</label>
+        <label><input type="checkbox" class="ingrediente" value="5"> Camarão - R$ 5,00</label>
+        <label><input type="checkbox" class="ingrediente" value="3"> Bacon - R$ 3,00</label>
+        <label><input type="checkbox" class="ingrediente" value="2"> Cebola - R$ 2,00</label>
+        <label><input type="checkbox" class="ingrediente" value="3"> Tomate Seco - R$ 3,00</label>
+        <label><input type="checkbox" class="ingrediente" value="4"> Azeitonas - R$ 4,00</label>
+        <label><input type="checkbox" class="ingrediente" value="6"> 3 Porquinhos - R$ 6,00</label>
+        <label><input type="checkbox" class="ingrediente" value="7"> 8 Queijos - R$ 7,00</label>
+        <label><input type="checkbox" class="ingrediente" value="10"> Dourada (folhas de ouro) - R$ 10,00</label>
+
+        <h2>Refrigerante</h2>
+        <label for="refrigerante">Escolha o refrigerante:</label>
+        <select id="refrigerante">
+            <option value="0">Sem refrigerante - R$ 0,00</option>
+            <option value="8">Coca-Cola 2L - R$ 8,00</option>
+            <option value="7">Guaraná 2L - R$ 7,00</option>
+            <option value="6">Fanta Laranja 2L - R$ 6,00</option>
+            <option value="6">Sprite 2L - R$ 6,00</option>
+        </select>
+
+        <h2>Total</h2>
+        <p class="total">Total: R$ <span id="total">25,00</span></p>
+
+        <button onclick="finalizarPedido()">Finalizar Pedido</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Pizzaria Tempero do Livin. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para calcular o total
+        function calcularTotal() {
+            const tamanho = parseFloat(document.getElementById('tamanho').value);
+            const borda = parseFloat(document.getElementById('borda').value);
+            const refrigerante = parseFloat(document.getElementById('refrigerante').value);
+            const metadeMetade = document.querySelector('input[name="sabor"]:checked').value;
+            const ingredientes = document.querySelectorAll('.ingrediente:checked');
+            let totalIngredientes = 0;
+
+            ingredientes.forEach(ingrediente => {
+                totalIngredientes += parseFloat(ingrediente.value);
+            });
+
+            const total = tamanho + borda + refrigerante + parseFloat(metadeMetade) + totalIngredientes;
+            document.getElementById('total').textContent = total.toFixed(2);
+        }
+
+        // Atualizar o total sempre que houver mudanças
+        document.querySelectorAll('select, input[type="checkbox"], input[type="radio"]').forEach(element => {
+            element.addEventListener('change', calcularTotal);
+        });
+
+        // Função para finalizar o pedido
+        function finalizarPedido() {
+            const total = document.getElementById('total').textContent;
+            alert(`Pedido finalizado! Total: R$ ${total}`);
+        }
+
+        // Calcular o total inicial
+        calcularTotal();
+    </script>
+</body>
+</html>
