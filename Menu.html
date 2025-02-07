@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Tempero do Livin</title>
+    <style>
+        body {
+            background-image: url('pizza-de-pepperoni-caseira-portal-minha-receita.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            height: 70px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin-left: 20px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #f39c12;
+            font-size: 1.5em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 120px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f39c12;
+            font-size: 2.5em;
+        }
+
+        .pizza-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+        }
+
+        .pizza-card {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .pizza-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .pizza-card h3 {
+            color: #f39c12;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .pizza-card p {
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .pizza-card .price {
+            font-size: 1.2em;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .pizza-card {
+                width: 45%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pizza-card {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="images (1).jpg" alt="Logo" class="logo"> 
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Promoções</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Montar Pizza</a></li>
+            <li><a href="#">Combos</a></li>
+        </ul>
+    </nav>
+
+    <h1>Pizzaria Tempero do Livin</h1>
+
+    <div class="pizza-grid">
+        <div class="pizza-card">
+            <img src="Pepperoni.jpg" alt="Pizza de Pepperoni">
+            <h3>Pizza de Pepperoni</h3>
+            <p>Deliciosa pizza de pepperoni com queijo derretido e molho especial.</p>
+            <p class="price">R$ 45,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Marguerita.jpg" alt="Pizza Margherita">
+            <h3>Pizza Margherita</h3>
+            <p>Clássica pizza Margherita com tomate fresco, manjericão e muçarela.</p>
+            <p class="price">R$ 40,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Quatro.jpg" alt="Pizza Quatro Queijos">
+            <h3>Pizza Quatro Queijos</h3>
+            <p>Pizza com uma combinação irresistível de quatro queijos especiais.</p>
+            <p class="price">R$ 50,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Calabresa.jpg" alt="Pizza de Calabresa">
+            <h3>Pizza de Calabresa</h3>
+            <p>Pizza de calabresa com cebola e azeitonas, uma combinação perfeita.</p>
+            <p class="price">R$ 42,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Frango.jpg" alt="Pizza de Frango com Catupiry">
+            <h3>Frango com Catupiry</h3>
+            <p>Pizza de frango desfiado com catupiry cremoso.</p>
+            <p class="price">R$ 48,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Portuguesa.jpg" alt="Pizza Portuguesa">
+            <h3>Pizza Portuguesa</h3>
+            <p>Pizza com presunto, ovos, cebola, azeitonas e muçarela.</p>
+            <p class="price">R$ 47,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="BatataFrita.jpg" alt="Pizza de Batata Frita">
+            <h3>Pizza de Batata Frita</h3>
+            <p>Pizza com batata frita crocante, queijo e bacon.</p>
+            <p class="price">R$ 55,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Camarao.jpg" alt="Pizza de Camarão">
+            <h3>Pizza de Camarão</h3>
+            <p>Pizza com camarões frescos, molho especial e queijo.</p>
+            <p class="price">R$ 70,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="AlhoFrito.jpg" alt="Pizza de Alho Frito">
+            <h3>Pizza de Alho Frito</h3>
+            <p>Pizza com alho frito crocante, queijo e azeite de oliva.</p>
+            <p class="price">R$ 44,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="3Porquinhos.jpg" alt="Pizza 3 Porquinhos">
+            <h3>Pizza 3 Porquinhos</h3>
+            <p>Pizza com bacon, linguiça e presunto, uma combinação suína incrível.</p>
+            <p class="price">R$ 58,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="8Queijos.jpg" alt="Pizza 8 Queijos">
+            <h3>Pizza 8 Queijos</h3>
+            <p>Pizza com oito tipos de queijos selecionados.</p>
+            <p class="price">R$ 65,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Dourada.jpg" alt="Pizza Dourada">
+            <h3>Pizza Dourada</h3>
+            <p>Pizza premium com folhas de ouro comestível e ingredientes exclusivos.</p>
+            <p class="price">R$ 200,00</p>
+        </div>
+    </div>
+
+    <h1 style="margin-top: 40px;">Pizzas Doces</h1>
+    <div class="pizza-grid">
+        <div class="pizza-card">
+            <img src="Chocolate.jpg" alt="Pizza de Chocolate">
+            <h3>Pizza de Chocolate</h3>
+            <p>Pizza doce com chocolate derretido e morangos frescos.</p>
+            <p class="price">R$ 35,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Banana.jpg" alt="Pizza de Banana com Canela">
+            <h3>Pizza de Banana com Canela</h3>
+            <p>Pizza doce com banana caramelizada e canela.</p>
+            <p class="price">R$ 38,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="RomeuJulieta.jpg" alt="Pizza Romeu e Julieta">
+            <h3>Pizza Romeu e Julieta</h3>
+            <p>Pizza doce com goiabada e queijo cremoso.</p>
+            <p class="price">R$ 40,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="Nutella.jpg" alt="Pizza de Nutella">
+            <h3>Pizza de Nutella</h3>
+            <p>Pizza doce com Nutella, morangos e chantilly.</p>
+            <p class="price">R$ 50,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="DoceLeite.jpg" alt="Pizza de Doce de Leite">
+            <h3>Pizza de Doce de Leite</h3>
+            <p>Pizza doce com doce de leite cremoso e coco ralado.</p>
+            <p class="price">R$ 42,00</p>
+        </div>
+        <div class="pizza-card">
+            <img src="FrutasVermelhas.jpg" alt="Pizza de Frutas Vermelhas">
+            <h3>Pizza de Frutas Vermelhas</h3>
+            <p>Pizza doce com frutas vermelhas frescas e chocolate branco.</p>
+            <p class="price">R$ 48,00</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Pizzaria Tempero do Livin. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
