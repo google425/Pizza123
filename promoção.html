@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monte Sua Pizza - Pizzaria Tempero do Livin</title>
+    <title>Promoções - Pizzaria Tempero do Livin</title>
     <style>
         body {
             background-image: url('pizza-de-pepperoni-caseira-portal-minha-receita.jpg');
@@ -69,51 +69,131 @@
             font-size: 2.5em;
         }
 
-        .montar-pizza {
+        .promo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .montar-pizza h2 {
-            color: #f39c12;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-
-        .montar-pizza label {
-            display: block;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .montar-pizza select, .montar-pizza input[type="checkbox"], .montar-pizza input[type="radio"] {
-            margin-bottom: 20px;
-        }
-
-        .montar-pizza .total {
-            font-size: 1.5em;
-            color: #f39c12;
-            font-weight: bold;
             margin-top: 20px;
         }
 
-        .montar-pizza button {
+        .promo-card {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .promo-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .promo-card h3 {
+            color: #f39c12;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .promo-card p {
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .promo-card .price {
+            font-size: 1.2em;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .promo-card .discount {
+            font-size: 1em;
+            color: #ff6b6b;
+            text-decoration: line-through;
+        }
+
+        .promo-card button {
             background-color: #f39c12;
             color: white;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
-            font-size: 1.2em;
+            font-size: 1em;
             cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .promo-card button:hover {
+            background-color: #e67e22;
+        }
+
+        .combo-section {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
             margin-top: 20px;
         }
 
-        .montar-pizza button:hover {
+        .combo-section h2 {
+            color: #f39c12;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .combo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .combo-card {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .combo-card h3 {
+            color: #f39c12;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .combo-card p {
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .combo-card .price {
+            font-size: 1.2em;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .combo-card button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .combo-card button:hover {
             background-color: #e67e22;
         }
 
@@ -126,22 +206,22 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
+            .promo-card, .combo-card {
+                width: 45%;
             }
 
-            .montar-pizza {
-                width: 95%;
+            h1 {
+                font-size: 2em;
             }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
+            .promo-card, .combo-card {
+                width: 100%;
             }
 
-            .montar-pizza {
-                width: 100%;
+            h1 {
+                font-size: 1.5em;
             }
         }
     </style>
@@ -150,103 +230,70 @@
     <nav>
         <img src="images (1).jpg" alt="Logo" class="logo"> 
         <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Promoções</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Montar Pizza</a></li>
-            <li><a href="#">Combos</a></li>
+            <li><a href="http://127.0.0.1:3000/index.html">Início</a></li>
+            <li><a href="http://127.0.0.1:3000/Menu.html">Menu</a></li>
+            <li><a href="http://127.0.0.1:3000/promoção.html">Promoções</a></li>
+            <li><a href="http://127.0.0.1:3000/Contato.html">Contato</a></li>
+            <li><a href="http://127.0.0.1:3000/CriarPizza.html">Montar Pizza</a></li>
+            <li><a href="http://127.0.0.1:3000/Combos.html">Combos</a></li>
         </ul>
     </nav>
 
-    <h1>Monte Sua Pizza</h1>
+    <h1>Promoções do Dia</h1>
 
-    <div class="montar-pizza">
-        <h2>Escolha o Tamanho</h2>
-        <label for="tamanho">Tamanho:</label>
-        <select id="tamanho">
-            <option value="25">Pequena (25cm) - R$ 25,00</option>
-            <option value="35">Média (35cm) - R$ 35,00</option>
-            <option value="45">Grande (45cm) - R$ 45,00</option>
-        </select>
+    <div class="promo-grid">
+        <div class="promo-card">
+            <img src="Pepperoni.jpg" alt="Pizza de Pepperoni">
+            <h3>Pizza de Pepperoni</h3>
+            <p>Deliciosa pizza de pepperoni com queijo derretido e molho especial.</p>
+            <p class="discount">De R$ 45,00</p>
+            <p class="price">Por R$ 29,25</p>
+            <button>Comprar</button>
+        </div>
+        <div class="promo-card">
+            <img src="Marguerita.jpg" alt="Pizza Margherita">
+            <h3>Pizza Margherita</h3>
+            <p>Clássica pizza Margherita com tomate fresco, manjericão e muçarela.</p>
+            <p class="discount">De R$ 40,00</p>
+            <p class="price">Por R$ 26,00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="promo-card">
+            <img src="Quatro.jpg" alt="Pizza Quatro Queijos">
+            <h3>Pizza Quatro Queijos</h3>
+            <p>Pizza com uma combinação irresistível de quatro queijos especiais.</p>
+            <p class="discount">De R$ 50,00</p>
+            <p class="price">Por R$ 32,50</p>
+            <button>Comprar</button>
+        </div>
+    </div>
 
-        <h2>Escolha a Borda</h2>
-        <label for="borda">Borda:</label>
-        <select id="borda">
-            <option value="0">Sem borda recheada - R$ 0,00</option>
-            <option value="5">Borda de Catupiry - R$ 5,00</option>
-            <option value="6">Borda de Cheddar - R$ 6,00</option>
-            <option value="7">Borda de Chocolate - R$ 7,00</option>
-        </select>
-
-        <h2>Escolha o Sabor</h2>
-        <label><input type="radio" name="sabor" value="0" checked> Único sabor</label>
-        <label><input type="radio" name="sabor" value="5"> Metade/Metade (+ R$ 5,00)</label>
-
-        <h3>Sabores Disponíveis</h3>
-        <label><input type="checkbox" class="ingrediente" value="3"> Pepperoni - R$ 3,00</label>
-        <label><input type="checkbox" class="ingrediente" value="2"> Queijo Extra - R$ 2,00</label>
-        <label><input type="checkbox" class="ingrediente" value="4"> Frango - R$ 4,00</label>
-        <label><input type="checkbox" class="ingrediente" value="5"> Camarão - R$ 5,00</label>
-        <label><input type="checkbox" class="ingrediente" value="3"> Bacon - R$ 3,00</label>
-        <label><input type="checkbox" class="ingrediente" value="2"> Cebola - R$ 2,00</label>
-        <label><input type="checkbox" class="ingrediente" value="3"> Tomate Seco - R$ 3,00</label>
-        <label><input type="checkbox" class="ingrediente" value="4"> Azeitonas - R$ 4,00</label>
-        <label><input type="checkbox" class="ingrediente" value="6"> 3 Porquinhos - R$ 6,00</label>
-        <label><input type="checkbox" class="ingrediente" value="7"> 8 Queijos - R$ 7,00</label>
-        <label><input type="checkbox" class="ingrediente" value="10"> Dourada (folhas de ouro) - R$ 10,00</label>
-
-        <h2>Refrigerante</h2>
-        <label for="refrigerante">Escolha o refrigerante:</label>
-        <select id="refrigerante">
-            <option value="0">Sem refrigerante - R$ 0,00</option>
-            <option value="8">Coca-Cola 2L - R$ 8,00</option>
-            <option value="7">Guaraná 2L - R$ 7,00</option>
-            <option value="6">Fanta Laranja 2L - R$ 6,00</option>
-            <option value="6">Sprite 2L - R$ 6,00</option>
-        </select>
-
-        <h2>Total</h2>
-        <p class="total">Total: R$ <span id="total">25,00</span></p>
-
-        <button onclick="finalizarPedido()">Finalizar Pedido</button>
+    <div class="combo-section">
+        <h2>Combos Especiais</h2>
+        <div class="combo-grid">
+            <div class="combo-card">
+                <h3>Combo 1</h3>
+                <p>2 Pizzas de Pepperoni + 1 Refrigerante 2L</p>
+                <p class="price">R$ 50,00</p>
+                <button>Comprar Combo</button>
+            </div>
+            <div class="combo-card">
+                <h3>Combo 2</h3>
+                <p>2 Pizzas Margherita + 1 Refrigerante 2L</p>
+                <p class="price">R$ 45,00</p>
+                <button>Comprar Combo</button>
+            </div>
+            <div class="combo-card">
+                <h3>Combo 3</h3>
+                <p>2 Pizzas Quatro Queijos + 1 Refrigerante 2L</p>
+                <p class="price">R$ 60,00</p>
+                <button>Comprar Combo</button>
+            </div>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2023 Pizzaria Tempero do Livin. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        // Função para calcular o total
-        function calcularTotal() {
-            const tamanho = parseFloat(document.getElementById('tamanho').value);
-            const borda = parseFloat(document.getElementById('borda').value);
-            const refrigerante = parseFloat(document.getElementById('refrigerante').value);
-            const metadeMetade = document.querySelector('input[name="sabor"]:checked').value;
-            const ingredientes = document.querySelectorAll('.ingrediente:checked');
-            let totalIngredientes = 0;
-
-            ingredientes.forEach(ingrediente => {
-                totalIngredientes += parseFloat(ingrediente.value);
-            });
-
-            const total = tamanho + borda + refrigerante + parseFloat(metadeMetade) + totalIngredientes;
-            document.getElementById('total').textContent = total.toFixed(2);
-        }
-
-        // Atualizar o total sempre que houver mudanças
-        document.querySelectorAll('select, input[type="checkbox"], input[type="radio"]').forEach(element => {
-            element.addEventListener('change', calcularTotal);
-        });
-
-        // Função para finalizar o pedido
-        function finalizarPedido() {
-            const total = document.getElementById('total').textContent;
-            alert(`Pedido finalizado! Total: R$ ${total}`);
-        }
-
-        // Calcular o total inicial
-        calcularTotal();
-    </script>
 </body>
 </html>

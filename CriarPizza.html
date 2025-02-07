@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria temperro do livin</title>
+    <title>Monte Sua Pizza - Pizzaria Tempero do Livin</title>
     <style>
         body {
             background-image: url('pizza-de-pepperoni-caseira-portal-minha-receita.jpg');
@@ -37,6 +37,7 @@
             right: 0;
             z-index: 10;
         }
+
         .logo {
             height: 70px;
             width: auto;
@@ -68,58 +69,52 @@
             font-size: 2.5em;
         }
 
-        .content {
-            text-align: center;
-            margin-top: 20px;
+        .montar-pizza {
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .content p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .pizzas {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin-top: auto;
-        }
-
-        .pizzas h2 {
-            width: 100%;
-            text-align: center;
-            font-size: 2em;
-            color: #f39c12;
-            margin-bottom: 20px;
-        }
-
-        .pizza-item {
-            width: 30%;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .pizza-item img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
             border-radius: 10px;
-            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .pizza-item h3 {
+        .montar-pizza h2 {
             color: #f39c12;
-            font-size: 1.5em;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .montar-pizza label {
+            display: block;
+            font-size: 1.2em;
             margin-bottom: 10px;
         }
 
-        .pizza-item p {
-            font-size: 1em;
-            line-height: 1.4;
+        .montar-pizza select, .montar-pizza input[type="checkbox"], .montar-pizza input[type="radio"] {
+            margin-bottom: 20px;
+        }
+
+        .montar-pizza .total {
+            font-size: 1.5em;
+            color: #f39c12;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .montar-pizza button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .montar-pizza button:hover {
+            background-color: #e67e22;
         }
 
         footer {
@@ -131,41 +126,24 @@
         }
 
         @media (max-width: 768px) {
-            nav ul li a {
-                font-size: 1.2em;
-            }
-
-            .pizza-item {
-                width: 45%;
-            }
-
             h1 {
                 font-size: 2em;
             }
 
-            .pizzas h2 {
-                font-size: 1.8em;
+            .montar-pizza {
+                width: 95%;
             }
         }
 
         @media (max-width: 480px) {
-            nav ul li a {
-                font-size: 1em;
-            }
-
-            .pizza-item {
-                width: 100%;
-            }
-
             h1 {
                 font-size: 1.5em;
             }
 
-            .pizzas h2 {
-                font-size: 1.5em;
+            .montar-pizza {
+                width: 100%;
             }
         }
-
     </style>
 </head>
 <body>
@@ -181,33 +159,6 @@
         </ul>
     </nav>
 
-    <h1>Pizzaria do temperro do livin</h1>
+    <h1>Monte Sua Pizza</h1>
 
-    <div class="content">
-        <p>Seja bem-vindo à nossa pizzaria! Aqui, preparamos as melhores pizzas para a sua censura</p>
-        <p>Experimente nossas receitas incríveis com nossa censuras mais incríveis</p>
-    </div>
-
-    <footer>
-        <div class="pizzas">
-            <h2>Carros chefes da Casa</h2>
-            <div class="pizza-item">
-                <img src="Pepperoni.jpg" alt="Pizza de Pepperoni">
-                <h3>Pizza de Pepperoni</h3>
-                <p>Deliciosa pizza de pepperoni com queijo derretido e molho especial.</p>
-            </div>
-            <div class="pizza-item">
-                <img src="Marguerita.jpg" alt="Pizza Margherita">
-                <h3>Pizza Margherita</h3>
-                <p>Clássica pizza Margherita com tomate fresco, manjericão e muçarela.</p>
-            </div>
-            <div class="pizza-item">
-                <img src="Quatro.jpg" alt="Pizza Quatro Queijos">
-                <h3>Pizza Quatro Queijos</h3>
-                <p>Pizza com uma combinação irresistível de quatro queijos especiais.</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+    
